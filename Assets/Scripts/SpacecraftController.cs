@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class SpacecraftController : MonoBehaviour
@@ -13,9 +12,7 @@ public class SpacecraftController : MonoBehaviour
     public LayerMask groundedMask;
 
     // System vars
-    bool grounded;
-    Vector3 moveAmount;
-    Vector3 smoothMoveVelocity;
+
     float verticalLookRotation;
     float horizontalLookRotation;
     public Transform cameraTransform;
@@ -105,35 +102,11 @@ public class SpacecraftController : MonoBehaviour
         verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90, 90);
         cameraTransform.localEulerAngles = Vector3.left * verticalLookRotation + Vector3.up * horizontalLookRotation;
 
-        // Calculate movement:
-        float inputX = Input.GetAxisRaw("Horizontal");
-        float inputY = Input.GetAxisRaw("Vertical");
+ 
 
-        Vector3 moveDir = new Vector3(inputX, 0, inputY).normalized;
-        Vector3 targetMoveAmount = moveDir * walkSpeed;
-        moveAmount = Vector3.SmoothDamp(moveAmount, targetMoveAmount, ref smoothMoveVelocity, .15f);
 
-        // Jump
-        if (Input.GetButtonDown("Jump"))
-        {
-            if (grounded)
-            {
-                body.AddForce(transform.up * jumpForce);
-            }
-        }
 
-        // Grounded check
-        Ray ray = new Ray(transform.position, -transform.up);
-        RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 1 + .1f, groundedMask))
-        {
-            grounded = true;
-        }
-        else
-        {
-            grounded = false;
-        }
 
     }
 
