@@ -1020,6 +1020,37 @@ LensFlare:
     serializedVersion: 2
     m_Bits: 6
   m_Directional: 1
+--- !u!1 &707697244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 707697245}
+  m_Layer: 0
+  m_Name: CamTarget
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &707697245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707697244}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.188, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 778208832}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &778208831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,8 +1085,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 164525957}
-  - {fileID: 1015611437}
   - {fileID: 1898877057}
+  - {fileID: 707697245}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -67.149, y: 0, z: 19.665}
 --- !u!54 &778208834
@@ -1147,6 +1178,7 @@ MonoBehaviour:
   - {fileID: 486940649}
   - {fileID: 2006878323}
   - {fileID: 542236275}
+  camTarget: {fileID: 707697245}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1272,13 +1304,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015611436}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.182, z: -0}
+  m_LocalRotation: {x: -0.5448971, y: 0.09443849, z: 0.14227886, w: 0.8209295}
+  m_LocalPosition: {x: -3.1102467, y: 4.510555, z: -8.725934}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
-  m_Father: {fileID: 778208832}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1136744954 stripped
 Transform:
@@ -2125,6 +2157,7 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 569864607}
   - {fileID: 1855021997}
+  - {fileID: 1015611437}
   - {fileID: 778208832}
   - {fileID: 1606425008}
   - {fileID: 668715493}

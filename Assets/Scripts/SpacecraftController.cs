@@ -28,6 +28,7 @@ public class SpacecraftController : MonoBehaviour
     public float torque = 1f;
 
     public ParticleSystem[] vfx;
+    public Transform camTarget;
 
 
     void Awake()
@@ -58,8 +59,9 @@ public class SpacecraftController : MonoBehaviour
         if (collision.impulse.magnitude > 10f)
         {
             Instantiate(explosion, transform.position, Quaternion.identity);
-            this.enabled = false;
-            cameraTransform.SetParent(null);
+            controls.Spacecraft.Disable();
+            //this.enabled = false;
+            //cameraTransform.SetParent(null);
         }
         
     }
@@ -100,6 +102,7 @@ public class SpacecraftController : MonoBehaviour
         horizontalLookRotation += Input.GetAxis("Mouse X") * mouseSensitivityX;
         verticalLookRotation += Input.GetAxis("Mouse Y") * mouseSensitivityY;
         verticalLookRotation = Mathf.Clamp(verticalLookRotation, -90, 90);
+        cameraTransform.position = camTarget.position;
         cameraTransform.localEulerAngles = Vector3.left * verticalLookRotation + Vector3.up * horizontalLookRotation;
 
  
