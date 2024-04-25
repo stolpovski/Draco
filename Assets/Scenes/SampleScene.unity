@@ -1065,7 +1065,7 @@ GameObject:
   - component: {fileID: 778208836}
   - component: {fileID: 778208837}
   m_Layer: 0
-  m_Name: Spacecraft
+  m_Name: Dragon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1137,7 +1137,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -9114703323446395147, guid: c7c807a0fb8ea4e4da346fbdb66f4215, type: 3}
+  m_Mesh: {fileID: -3298800115395149385, guid: c7c807a0fb8ea4e4da346fbdb66f4215, type: 3}
 --- !u!114 &778208836
 MonoBehaviour:
   m_ObjectHideFlags: 0
