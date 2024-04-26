@@ -386,7 +386,8 @@ PrefabInstance:
       value: Dragon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4860884733252827142, guid: c7c807a0fb8ea4e4da346fbdb66f4215, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7c807a0fb8ea4e4da346fbdb66f4215, type: 3}
