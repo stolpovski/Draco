@@ -91,6 +91,7 @@ public class SpacecraftController : MonoBehaviour
         foreach (ParticleSystem fx in vfx)
         {
             fx.Stop();
+            fx.Clear();
         }
     }
 
